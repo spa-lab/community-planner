@@ -1,0 +1,11 @@
+
+package.json
+--------
+Change keystone.js to community-planner.js
+
+
+Procfile
+--------
+Change keystone.js to community-planner.js
+
+

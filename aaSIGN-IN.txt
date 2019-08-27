@@ -1,0 +1,39 @@
+keystone > admin > api > session >
+  signin.js
+  signout.js
+
+Keystone > admin > routes > views >
+  signin.js
+  signout.js
+
+keystone > lib > core >
+  options.js
+  render.js
+  routes.js
+
+keystone > lib > security >
+  csrf.js
+
+keystone > lib >
+  email.js
+  session.js
+  view.js
+
+keystone > templates > includes
+  auth-brand.jade
+
+keystone > templates > layout
+  auth.jade
+  base.jade
+
+keystone > templates > mixins
+  flashMessages.jade
+
+keystone > templates > views
+  signin.jade
+  signout.jade
+
+keystone >
+  index.js
+
+
