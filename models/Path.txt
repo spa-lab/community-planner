@@ -1,0 +1,63 @@
+
+// IconStyle (Icon) - IconOptions
+// ================================================================================
+// className          String                  A custom class name to assign to both icon and shadow images. Empty by default.
+
+// iconUrl            String    (required)    The URL to the icon image (absolute or relative to your script path).
+// iconRetinaUrl      String                  The URL to a retina sized version of the icon image (absolute or relative to your script path). Used for Retina screen devices.
+
+// iconSize           Point                   Size of the icon image in pixels.
+// iconAnchor         Point                   The coordinates of the "tip" of the icon (relative to its top left corner). The icon will be aligned so that this point is at the marker's geographical location. Centered by default if size is specified, also can be set in CSS with negative margins.
+// popupAnchor        Point                   The coordinates of the point from which popups will "open", relative to the icon anchor.
+
+// shadowUrl          String                  The URL to the icon shadow image. If not specified, no shadow image will be created.
+// shadowRetinaUrl    String                  The URL to the retina sized version of the icon shadow image. If not specified, no shadow image will be created. Used for Retina screen devices.
+// shadowSize         Point                   Size of the shadow image in pixels.
+// shadowAnchor       Point                   The coordinates of the "tip" of the shadow (relative to its top left corner) (the same as iconAnchor if not specified).
+
+
+// DivIconStyle (DivIcon) - DivIconOptions
+// ================================================================================
+// className          String                  A custom class name to assign to the icon. 'leaflet-div-icon' by default.
+// html               String                  A custom HTML code to put inside the div element, empty by default.
+
+// iconSize           Point                   Size of the icon in pixels. Can be also set through CSS.
+// iconAnchor         Point                   The coordinates of the "tip" of the icon (relative to its top left corner). The icon will be aligned so that this point is at the marker's geographical location. Centered by default if size is specified, also can be set in CSS with negative margins.
+// popupAnchor        Point                   The coordinates of the point from which popups will "open", relative to the icon anchor.
+
+
+// (Polyline / MultiPolyline)
+// ================================================================================
+// smoothFactor       Number    1.0           How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.
+// noClip             Boolean   false         Disabled polyline clipping.
+// + Path
+
+// (Polygon / MultiPolygon)
+// ================================================================================
+// smoothFactor       Number    1.0           How much to simplify the polyline on each zoom level. More means better performance and smoother look, and less means more accurate representation.
+// noClip             Boolean   false         Disabled polyline clipping.
+// + Path
+
+// CircleMarkerStyle (CircleMarker)
+// ================================================================================
+// radius             Number    10            The radius of the circelMarker in pixels.
+// + Path
+
+// (Rectangle / Circle)
+// ================================================================================
+// className          String    ''            Custom class name set on an element.
+// clickable          Boolean   true          If false, the vector will not emit mouse events and will act as a part of the underlying map.
+// pointerEvents      String    null          Sets the pointer-events attribute on the path if SVG backend is used.
+
+// color              String    '#03f'        Stroke color.
+// weight             Number    5             Stroke width in pixels.
+// opacity            Number    0.5           Stroke opacity.
+// dashArray          String    null          A string that defines the stroke dash pattern. Doesn't work on canvas-powered layers (e.g. Android 2).
+// lineCap            String    null          A string that defines shape to be used at the end of the stroke.
+// lineJoin           String    null          A string that defines shape to be used at the corners of the stroke.
+
+// stroke             Boolean   true          Whether to draw stroke along the path. Set it to false to disable borders on polygons or circles.
+// fill               Boolean   depends       Whether to fill the path with color. Set it to false to disable filling on polygons or circles.
+// fillColor          String                  same as color	Fill color.
+// fillOpacity        Number    0.2           Fill opacity.
+// fillRule           String    'evenodd'     A string that defines how the inside of a shape is determined.

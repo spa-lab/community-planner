@@ -1,27 +1,50 @@
+
+// ================================================================================
+//  University of Manchester. UK.
+//  School of Environment, Education, and Development.
+//  Centre for Urban Policy Studies.
+// 
+//  Name:            Enquiry [/models]
+//  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+// 
+//  Description:     Used to submit an enquiry.
+// ================================================================================
+
+
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-/**
- * Enquiry Model
- * =============
- */
-
+// Create the enquiry.
 var Enquiry = new keystone.List('Enquiry', {
 	nocreate: true,
 	noedit: true,
 });
 
+// Add fields in the model.
 Enquiry.add({
+
+	// The name of the person submitting the enquiry.
 	name: { type: Types.Name, required: true },
+
+	// The e-mail of the person submitting the enquiry.
 	email: { type: Types.Email, required: true },
+
+	// The phone of the person submitting the enquiry.
 	phone: { type: String },
+
+	// The type of the enquiry.
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'message', label: 'Just leaving a message' },
 		{ value: 'question', label: 'I\'ve got a question' },
-		{ value: 'other', label: 'Something else...' },
+		{ value: 'other', label: 'Something else...' }
 	] },
+
+	// The message of the enquiry.
 	message: { type: Types.Markdown, required: true },
-	createdAt: { type: Date, default: Date.now },
+
+	// The date that this enquiry was created.
+	createdAt: { type: Date, default: Date.now }
+
 });
 
 Enquiry.schema.pre('save', function (next) {
@@ -36,6 +59,7 @@ Enquiry.schema.post('save', function () {
 });
 
 Enquiry.schema.methods.sendNotificationEmail = function (callback) {
+
 	if (typeof callback !== 'function') {
 		callback = function (err) {
 			if (err) {
@@ -53,7 +77,9 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 	var brand = keystone.get('brand');
 
 	keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
+
 		if (err) return callback(err);
+
 		new keystone.Email({
 			templateName: 'enquiry-notification',
 			transport: 'mailgun',
@@ -69,8 +95,10 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 			layout: false,
 		}, callback);
 	});
+
 };
 
+// Register the model.
 Enquiry.defaultSort = '-createdAt';
 Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
 Enquiry.register();

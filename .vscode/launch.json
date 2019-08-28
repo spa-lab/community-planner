@@ -5,10 +5,46 @@
   "version": "0.2.0",
   "configurations": [
     {
+      // Name of configuration; appears in the launch configuration drop down menu.
+      "name": "Launch community-planner.js",
+      // Type of configuration.
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}\\community-planner.js"
+      // Workspace relative or absolute path to the program.
+      "program": "${workspaceFolder}/community-planner.js",
+
+      // Automatically stop program after launch.
+      "stopOnEntry": false,
+      // Command line arguments passed to the program.
+      "args": [],
+      // Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
+      "cwd": "${workspaceRoot}/.",
+      // Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
+      "runtimeExecutable": null,
+      // Optional arguments passed to the runtime executable.
+      "runtimeArgs": ["--nolazy"],
+      // Environment variables passed to the program.
+      "env": {
+        "NODE_ENV": "development"
+      },
+      // Use JavaScript source maps (if they exist).
+      "sourceMaps": false,
+      // If JavaScript source maps are enabled, the generated code is expected in this directory.
+      "outFiles": [
+      ]
+    },
+    {
+      // Name of configuration; appears in the launch configuration drop down menu.
+      "name": "Attach",
+      // Type of configuration.
+      "type": "node",
+      "request": "attach",
+      // TCP/IP address. Default is "localhost".
+      "address": "localhost",
+      // Port to attach to.
+      "port": 5858,
+      // Use JavaScript source maps (if they exist).
+      "sourceMaps": false
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "community-planner",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "keystone": "4.0.0-beta.5",
