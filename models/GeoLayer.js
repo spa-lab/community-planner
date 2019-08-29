@@ -6,6 +6,8 @@
 // 
 //  Name:            GeoLayer [/models]
 //  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//                   Vasilis Vlastaras (@gisvlasta), 29/08/2019.
+//                     Corrected GeoLayer.relationship definition
 // 
 //  Description:     The Geolayer model is used to store GeoJSON data.
 // ================================================================================
@@ -41,7 +43,7 @@ GeoLayer.add({
 });
 
 // Define the relationships of the GeoLayer.
-GeoLayer.relationship({ ref: 'Plan', path: 'geoLayers' });
+GeoLayer.relationship({ ref: 'Plan', path: 'plans', refPath: 'geoLayers' });
 
 // Register the model.
 GeoLayer.defaultColumns = 'name|30%, description, dataType|20%';

@@ -1,0 +1,2 @@
+{"_id":{"$oid":"562e87349c2b81242267be58"},"isAdmin":true,"password":"$2a$10$R/Z0ZnxNGNdRnTnKp8hWX.VkYVkaaFbeQDVkC4OPHZILbZ1EsSXxC","email":"vasileios.vlastaras@manchester.ac.uk","name":{"last":"Vlastaras","first":"Vasilis"},"__v":0}
+{"_id":{"$oid":"5645e0d700c42e9014d351dc"},"password":"$2a$10$zAeIpevr0MwD/qEtVrxGF.ixbiYAV2t/m1nXz/R7Vm39y.KR9xeTC","email":"richard.kingston@manchester.ac.uk","name":{"last":"Kingston","first":"Richard"},"__v":0,"isAdmin":false}

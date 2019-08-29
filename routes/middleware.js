@@ -11,21 +11,42 @@ var _ = require('lodash');
 
 
 /**
-	Initialises the standard view locals
-
-	The included layout depends on the navLinks array to generate
-	the navigation in the header, you may wish to change this array
-	or replace it with your own templates / logic.
+  Initialises the standard view locals
+  
+  The included layout depends on the navLinks array to generate
+  the navigation in the header, you may wish to change this array
+  or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
-	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Blog', key: 'blog', href: '/blog' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
-	];
-	res.locals.user = req.user;
-	next();
+  
+  var locals = res.locals;
+  
+  locals.navLinks = [
+    { label: 'Home', key: 'home', href: '/' },
+    { label: 'Blog', key: 'blog', href: '/blog' },
+    { label: 'Gallery', key: 'gallery', href: '/gallery' },
+    /*{ label: 'Map', key: 'map', href: '/map' },*/
+    {
+      label: 'Maps',
+      key: 'maps',
+      href: '/map',
+      nestedNavLinks: [
+        { label: 'Census 2011', key: 'census2011', href: '/maps/census2011' },
+        { label: 'TestMap 1', key: 'testmap1', href: '/maps/testmap1' },
+        { label: 'TestMap 2', key: 'testmap2', href: '/maps/testmap2' },
+        { label: 'TestMap 3', key: 'testmap3', href: '/maps/testmap3' }
+      ]
+    },
+    { label: 'Plans', key: 'plans', href: '/plans' },
+    { label: 'Contact', key: 'contact', href: '/contact' },
+    { label: 'Test', key: 'test', href: '/test' },
+    { label: 'Test2', key: 'test2', href: '/test2' }
+  ];
+  
+  locals.user = req.user;
+  
+  next();
+  
 };
 
 

@@ -47,8 +47,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 50px;
-  /*background-color: #f5f5f5;*/
-  background-color: #ffd800;
+  background-color: #f5f5f5;
 }
 
 #wrap > .center-container {

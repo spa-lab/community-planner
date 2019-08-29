@@ -93,18 +93,18 @@ var s = "{  \"applySymbology\" : \"function applySymbology(feature) {    if (fea
 
 var copelandOa2011Style = JSONfn.parse(s);
 
-$.get(copelandOa2011Url, function(data2) {
-  alert(data2.id);
+// $.get(copelandOa2011Url, function(data2) {
+//   alert(data2.id);
   
   
-  // copelandOa2011Data = JSON.parse(data2.geoJsonData);
-  // 
-  // copelandOa2011Layer = L.geoJson(copelandOa2011Data, {
-  //   style: copelandOa2011Style.applySymbology 
-  // });
-  // 
-  // copelandOa2011Layer.addTo(map);
-});
+//   // copelandOa2011Data = JSON.parse(data2.geoJsonData);
+//   // 
+//   // copelandOa2011Layer = L.geoJson(copelandOa2011Data, {
+//   //   style: copelandOa2011Style.applySymbology 
+//   // });
+//   // 
+//   // copelandOa2011Layer.addTo(map);
+// });
 
 // copelandOa2011Layer = L.geoJson(copelandOa2011Data, {
 //   style: copelandOa2011Style.applyNaturalBreaksStyle 

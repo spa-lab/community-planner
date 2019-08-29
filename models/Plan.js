@@ -72,10 +72,7 @@ Plan.add({
   
   // The files related to the planning project.
   files: { type: Types.Relationship, ref: 'File', many: true },
-  
-  // The comments associated with the project.
-  comments: { type: Types.Relationship, ref: 'Comment', many: true },
-  
+    
   // The user that created this project.
   author: { type: Types.Relationship, ref: 'User', many: false }
   

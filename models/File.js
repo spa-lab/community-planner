@@ -6,6 +6,8 @@
 // 
 //  Name:            File [/models]
 //  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//                   Vasilis Vlastaras (@gisvlasta), 29/08/2019.
+//                     Corrected File.relationship definition
 // 
 //  Description:     The File model stores information related to a file.
 // ================================================================================
@@ -50,7 +52,7 @@ File.add({
 });
 
 // Define the relationships of the Plan.
-File.relationship({ ref: 'Plan', path: 'files' });
+File.relationship({ ref: 'Plan', path: 'plans', refPath: 'files' });
 
 // Register the model.
 File.defaultColumns = 'name|20%, description|30%, localFile';

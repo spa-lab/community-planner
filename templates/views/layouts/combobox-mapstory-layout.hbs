@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Community Planner | StoryMap</title>
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/libs/bootstrap-3.3.5/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/libs/font-awesome-4.4.0/css/font-awesome.min.css" >
+  <link rel="stylesheet" href="/libs/ionicons-2.0.1/css/ionicons.min.css" >
+  
+  <link rel="stylesheet" href="/libs/leaflet-0.7.7/leaflet.css" >
+  
+  <link rel="stylesheet" href="/libs/leaflet-plugins/sidebar-v2-master/leaflet-sidebar.min.css" >
+  
+  <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-iconlabel/leaflet.iconlabel.css" >
+  <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-awesome-markers-2.0.2/leaflet.awesome-markers.css" >
+  <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-extra-markers-1.0.3/leaflet.extra-markers.css" >
+  <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-vector-markers-0.0.3/leaflet.vector-markers.css" >
+  <!-- <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-mapkey-icon/L.Icon.MapKey.css" > -->
+  <link rel="stylesheet" href="/libs/leaflet-plugins/leaflet-mapkey-icon/MapkeyIcons.css" >
+  
+  <link rel="stylesheet" href="/styles/combobox-mapstory-layout.css" >
+  
+  {{!-- This file provides the default styling for the KeystoneJS Content Editor
+    - only renders when user is logged in and admin
+  --}}
+  {{{isAdminEditorCSS user}}}
+  
+  {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    //- Safely remove this block if you are not targeting IE8
+  --}}
+  <!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  
+  <!-- Wrap all page content here -->
+  <div id="wrap" class="container-fluid">
+    
+    <div id="header">
+      <div class="container">
+        
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div id="navbar-container" class="container">
+            <div class="navbar-header">
+              <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">Community Planner</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-left">
+                {{#each navLinks}}
+                  {{#if nestedNavLinks}}
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Maps <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        {{#each nestedNavLinks}}
+                          <li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}}>
+                            <a href="{{ href }}">{{ label }}</a>
+                          </li>
+                        {{/each}}
+                      </ul>      
+                    </li>
+                  {{else}}
+                    <li {{#ifeq ../section key}} class="active" {{else}} {{/ifeq}}>
+                      <a href="{{ href }}">{{ label }}</a>
+                    </li>
+                  {{/if}}
+                {{/each}}
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                {{#if user}}
+                <li><a href="/keystone/signout">Sign Out</a></li>
+                {{else}}
+                <li><a href="/keystone/signin">Sign In</a></li>
+                {{/if}}
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Begin page content -->
+    <div class="center-container">
+      <div class="center-row">
+        <div id="body" class="container">
+          <!--
+            Flash messages allow you to display once-off status messages to users, e.g. form
+            validation errors, success messages, etc
+          -->
+          {{#if messages}}
+          <div id="flash-messages" class="container">
+            {{#if messages.info}}
+            <div class="alert alert-info">
+              {{{flashMessages messages.info}}}
+            </div>
+            {{/if}}
+            {{#if messages.success}}
+            <div class="alert alert-success">
+              {{{flashMessages messages.success}}}
+            </div>
+            {{/if}}
+            {{#if messages.warning}}
+            <div class="alert alert-warning">
+              {{{flashMessages messages.warning}}}
+            </div>
+            {{/if}}
+            {{#if messages.error}}
+            <div class="alert alert-danger">
+              {{{flashMessages messages.error}}}
+            </div>
+            {{/if}}
+          </div>
+          {{/if}}
+          <!-- The content block should contain the body of your template's content-->
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div id="footer">
+    <div class="container">
+      <!--<p>&nbsp;</p>-->
+      <div>
+        <h4>Source code can be found in GitHub: <a href="https://github.com/gisvlasta/community-planner" target="_cf">Community Planner</a></h4>
+      </div>
+    </div>
+  </div>
+  
+  {{!--
+    //- jQuery 1.11.3 is included by default, and required by both Bootstrap
+    //- and the KeystoneJS Content Editor. If you are not targeting IE8,
+    //- you can upgrade to 2.1.4 (also bundled) for better performance.
+  --}}
+  <script type="text/javascript" src="/libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+  {{!--
+    //- Customise which Bootstrap javascript files are served by including
+    //- them specifically here, instead of bootstrap-3.3.5.min.js
+  --}}
+  <script type="text/javascript" src="/libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/libs/proj4js-2.3.12/proj4.js"></script>
+  <script type="text/javascript" src="/libs/jsonfn/jsonfn.js"></script>
+  
+  <script type="text/javascript" src="/libs/leaflet-0.7.7/leaflet.js"></script>
+  
+  <script type="text/javascript" src="/libs/leaflet-plugins/sidebar-v2-master/leaflet-sidebar.min.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/proj4leaflet-0.7.2/proj4leaflet.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-grayscale/TileLayer.Grayscale.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-providers-1.1.7/leaflet-providers.js"></script>
+  
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-iconlabel/leaflet.iconlabel.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-awesome-markers-2.0.2/leaflet.awesome-markers.min.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-extra-markers-1.0.3/leaflet.extra-markers.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-maki-markers-1.0.1/Leaflet.MakiMarkers.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-vector-markers-0.0.3/Leaflet.vector-markers.min.js"></script>
+  <script type="text/javascript" src="/libs/leaflet-plugins/leaflet-mapkey-icon/L.Icon.MapKey.js"></script>
+  
+  <script type="text/javascript" src="/js/combobox-mapstory.js"></script>
+  
+  {{{isAdminEditorJS user}}}
+</body>
+</html>

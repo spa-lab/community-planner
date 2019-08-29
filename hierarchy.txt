@@ -12,7 +12,7 @@
     |----[routes]
     |    |----[api]
     |    |----[views]
-    |    |----index.js       [Initialises application's routes and views. Use this to add al lthe routes needed by the application.]
+    |    |----index.js       [Initialises application's routes and views. Use this to add all the routes needed by the application.]
     |    |----middleware.js  [Custom middleware used for routes. Put the menu links here.]
     |
     |----[templates]
@@ -30,13 +30,11 @@
     |--[updates]             [Data population and migration scripts]
     |  |--0.0.1-admins.js    [Creates admin user and an empty database.]
     |
-    |--.env           [Environment settings variables.]
-    |--bootle.js      [Application global variables etc.]
-    |--jsconfig.json  [Intellisense configuration.]
-    |--keystone.js    [Initializes application. Configures the navigation bar as well on the UI.]
-    |--package.json   [Project configuration for npm.]
-    |--web.js         [ *** Perhaps contents of the keystone.js *** ]
-    |--Procfile       [ *** What is this ? *** ]
+    |--.env                    [Environment settings variables.]
+    |--globals.js              [Application global variables etc.]
+    |--community-planner.js    [Initializes application. Configures the navigation bar as well on the UI.]
+    |--package.json            [Project configuration for npm.]
+    |--Procfile                [ Called by 'npm start' ]
     |
     
     ================================================================================
@@ -57,4 +55,4 @@
     
     
     
-    
+	

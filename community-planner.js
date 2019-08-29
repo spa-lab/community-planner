@@ -34,7 +34,18 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'port': 8084,
+  'port': 8084,
+  'signin url': '/signin',
+  'signin redirect': '/',
+  'signout url': '/signout',
+  'signout redirect': '/',
+  //'signin logo': ['/images/logos/bootle-2020-logo.svg', 200, 200]
+  'signin logo': ['/images/key.svg', 200, 200],
+  //'signin logo': ['/images/key3.svg', 200, 200],
+  //'signin logo': ['/images/user3.svg', 200, 200],
+  //'signin logo': ['/images/users2.svg', 200, 200],
+  //'signin logo': ['/images/users4.svg', 200, 200]
+  
 });
 
 // Load your project's Models
@@ -57,8 +68,11 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	enquiries: 'enquiries',
-	galleries: 'galleries',
-	posts: ['posts', 'post-categories'],
+  galleries: 'galleries',
+  geolayers: ['geo-layers', 'geo-layer-definitions', 'popup-functions', 'symbology-functions'],
+  plans: ['comments', 'files', 'plans', 'plan-texts'],
+  posts: ['posts', 'post-categories'],
+  styles: ['base-icon-styles', 'circle-marker-styles', 'div-icon-styles', 'fill-styles', 'icon-styles', 'line-styles', 'simple-fill-styles'],
 	users: 'users'
 });
 

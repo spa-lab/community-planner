@@ -1,0 +1,2 @@
+{"_id":{"$oid":"56b52239400d0cc428f0be65"},"slug":"testtuple1","name":"TestTuple1","accessedBy":"all","__v":0,"c1":"string","c2":"string","c3":"","c4":"","c5":"","c6":"","c7":"","c8":"","t1":"lala1","t2":"lala2","t3":"","t4":"","t5":"","t6":"","t7":"","t8":""}
+{"_id":{"$oid":"56b52269400d0cc428f0be66"},"slug":"testtuple2","name":"TestTuple2","accessedBy":"users","__v":0,"c1":"string","c2":"","c3":"string","c4":"","c5":"","c6":"","c7":"","c8":"","t1":"aman","t2":"aman2","t3":"aman3","t4":"aman4","t5":"","t6":"","t7":"","t8":""}

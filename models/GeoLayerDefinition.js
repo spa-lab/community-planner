@@ -6,6 +6,8 @@
 // 
 //  Name:            GeoLayerDefinition [/models]
 //  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//                   Vasilis Vlastaras (@gisvlasta), 29/08/2019.
+//                     Corrected GeoLayerDefinition.relationship definition
 // 
 //  Description:     The GeoLayerDefinition model is used to describe the
 //                   rendering of a GeoLayer.
@@ -42,8 +44,8 @@ GeoLayerDefinition.add({
 });
 
 // Define the relationships of the GeoLayerDefinition.
-GeoLayerDefinition.relationship({ ref: 'GeoLayer', path: 'definitions' });
-GeoLayerDefinition.relationship({ ref: 'Plan', path: 'geoLayersDefinitions' });
+GeoLayerDefinition.relationship({ ref: 'GeoLayer', path: 'geolayers', refPath: 'definitions' });
+GeoLayerDefinition.relationship({ ref: 'Plan', path: 'plans', refPath: 'geoLayersDefinitions' });
 
 // Register the model.
 GeoLayerDefinition.defaultColumns = 'name|30%, description, order';

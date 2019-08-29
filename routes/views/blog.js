@@ -37,8 +37,10 @@ exports = module.exports = function (req, res) {
 
 			}, function (err) {
 				next(err);
-			});
-		});
+      });
+      
+    });
+    
 	});
 
 	// Load the current category filter
@@ -51,7 +53,8 @@ exports = module.exports = function (req, res) {
 			});
 		} else {
 			next();
-		}
+    }
+    
 	});
 
 	// Load the posts
@@ -75,9 +78,11 @@ exports = module.exports = function (req, res) {
 		q.exec(function (err, results) {
 			locals.data.posts = results;
 			next(err);
-		});
+    });
+    
 	});
 
 	// Render the view
-	view.render('blog');
+  view.render('blog');
+  
 };

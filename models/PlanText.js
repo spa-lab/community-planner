@@ -6,6 +6,8 @@
 // 
 //  Name:            PlanText [/models]
 //  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//                   Vasilis Vlastaras (@gisvlasta), 29/08/2019.
+//                     Corrected PlanText.relationship definition
 // 
 //  Description:     The PlanText model stores textual information related to a
 //                   planning project.
@@ -39,7 +41,7 @@ PlanText.add({
 });
 
 // Define the relationships of the PlanText.
-PlanText.relationship({ ref: 'Plan', path: 'planTexts' });
+PlanText.relationship({ ref: 'Plan',path: 'plans', refPath: 'planTexts' });
 
 // Register the model.
 PlanText.defaultColumns = 'name|30%, description';

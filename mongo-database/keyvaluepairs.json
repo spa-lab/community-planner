@@ -1,0 +1,5 @@
+{"_id":{"$oid":"564c85bf8ec9e06004b476d5"},"lckey":"k1","value":"value 1","key":"K1","__v":0,"cast":"string","accessedBy":"all"}
+{"_id":{"$oid":"564c85ce8ec9e06004b476d6"},"lckey":"k2","value":"value 2","key":"k2","__v":0,"cast":"","accessedBy":"users"}
+{"_id":{"$oid":"564c85d98ec9e06004b476d7"},"lckey":"k3","value":"value 3","key":"k3","__v":0,"cast":"","accessedBy":"users"}
+{"_id":{"$oid":"564c85e48ec9e06004b476d8"},"lckey":"k4","value":"value 4","key":"k4","__v":0,"cast":"string","accessedBy":"admins"}
+{"_id":{"$oid":"566f2ee94167984c14d3eedc"},"lckey":"k5","accessedBy":"all","value":"value 5","key":"K5","__v":0,"cast":"string"}
