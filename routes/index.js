@@ -4,8 +4,9 @@
 //  School of Environment, Education, and Development.
 //  Centre for Urban Policy Studies.
 //  
-//  Name:            index.js [/routes/api]
+//  Name:            index.js [/routes]
 //  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//  Updated:         Vasilis Vlastaras (@gisvlasta), 30/08/2019.
 // 
 //  Description:     Defines the REST API endpoints (route) bindings.
 // ================================================================================
@@ -52,15 +53,13 @@ exports = module.exports = function (app) {
   app.get('/blog/:category?', routes.views.blog);
   app.get('/blog/post/:post', routes.views.post);
   app.get('/gallery', routes.views.gallery);
-  app.get('/map', routes.views.map);
-  app.get('/maps/census2011', routes.views.comboboxmapstory);
-  app.get('/maps/testmap1', routes.views.comboboxmapstory);
-  app.get('/maps/testmap2', routes.views.comboboxmapstory);
-  app.get('/maps/testmap3', routes.views.comboboxmapstory);
+  // app.get('/map', routes.views.map);
+  // app.get('/maps/census2011', routes.views.comboboxmapstory);
+  // app.get('/maps/testmap1', routes.views.comboboxmapstory);
+  // app.get('/maps/testmap2', routes.views.comboboxmapstory);
+  // app.get('/maps/testmap3', routes.views.comboboxmapstory);
   app.get('/plans', routes.views.plans);
   app.all('/contact', routes.views.contact);
-  app.get('/test', routes.views.test);
-  app.get('/test2', routes.views.test2);
   
   // API
   // app.get('/api/model(s)/list', keystone.middleware.api, routes.api.model(s).list);

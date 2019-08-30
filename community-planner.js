@@ -39,12 +39,7 @@ keystone.init({
   'signin redirect': '/',
   'signout url': '/signout',
   'signout redirect': '/',
-  //'signin logo': ['/images/logos/bootle-2020-logo.svg', 200, 200]
   'signin logo': ['/images/key.svg', 200, 200],
-  //'signin logo': ['/images/key3.svg', 200, 200],
-  //'signin logo': ['/images/user3.svg', 200, 200],
-  //'signin logo': ['/images/users2.svg', 200, 200],
-  //'signin logo': ['/images/users4.svg', 200, 200]
   
 });
 

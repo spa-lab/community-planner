@@ -1,13 +1,66 @@
 {{!< default}}
-<div class="container padtop20">
+<div class="container padtop20" style="background: orange;">
 	
-	<h1>Welcome to Community Planner</h1>
+	{{!-- <h1>Welcome to Community Planner</h1>
 	
   <div class="jumbotron">
     <!-- <img src="/images/logos/bootle-2020-logo.svg" width="800"> -->
     <img class="img-responsive" src="/images/logos/bootle-2020-logo.svg">
     <br/><br/>
     <p>This is the communtiy planner web application.</p>
-  </div>
+  </div> --}}
+	
+	
+	<main role="main">
+
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron" style="background: gold;">
+			<div class="container">
+				<h1 class="display-3 c-indigo">Community Planner</h1>
+				<p class="c-indigo">
+					A Public Participation, Neighbourhood Planning Support System running on	<a href="https://nodejs.org" target="_cf">Node.js</a>.
+				</p>
+				<p class="c-indigo">
+					Developed using the <a href="https://keystonejs.com" target="_cf">KeystoneJS</a> Content Management System and
+					<a href="https://www.mongodb.com" target="_cf">mongoDB</a> document store.
+				</p>
+				{{!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> --}}
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 textcentre">
+					<i class="fa fa-building icon" aria-hidden="true"></i>
+					<h2 class="c-indigo">Publish Plans</h2>
+					<p class="c-indigo">
+						The system allows an administrator to publish neighbourhood plans.
+						Plans can have geographic layers that can be rendered on a map to allow users get insights.
+						Detailed plan descriptions can be read on screen and related documents can be downloaded.
+					</p>
+					{{!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
+				</div>
+				<div class="col-md-4 textcentre">
+					<i class="fa fa-comments icon" aria-hidden="true"></i>
+					<h2 class="c-indigo">Comment</h2>
+					<p class="c-indigo">
+						Users of the system can comment on existing plans and read comments of other users. Comments can be geolocated on a map using points, lines or polygons.
+					</p>
+					{{!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
+				</div>
+				<div class="col-md-4 textcentre">
+					<i class="fa fa-clipboard icon" aria-hidden="true"></i>
+					<h2 class="c-indigo">Make Proposals</h2>
+					<p class="c-indigo">
+						Users are allowed to make their own planning proposals that can be saved in the database. The proposals can then be mapped and accessed by the other users of the system as well as be commented.
+					</p>
+					{{!-- <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> --}}
+				</div>
+			</div>
+
+		</div>
+		
+	</main>
+		
 	
 </div>

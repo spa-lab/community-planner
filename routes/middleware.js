@@ -1,3 +1,16 @@
+
+// ================================================================================
+//  University of Manchester. UK.
+//  School of Environment, Education, and Development.
+//  Centre for Urban Policy Studies.
+//  
+//  Name:            middleware.js [/routes]
+//  Original coding: Vasilis Vlastaras (@gisvlasta), 25/04/2016.
+//  Updated:         Vasilis Vlastaras (@gisvlasta), 30/08/2019.
+// 
+//  Description:     Defines the REST API endpoints (route) bindings.
+// ================================================================================
+
 /**
  * This file contains the common middleware used by your routes.
  *
@@ -25,22 +38,19 @@ exports.initLocals = function (req, res, next) {
     { label: 'Home', key: 'home', href: '/' },
     { label: 'Blog', key: 'blog', href: '/blog' },
     { label: 'Gallery', key: 'gallery', href: '/gallery' },
-    /*{ label: 'Map', key: 'map', href: '/map' },*/
-    {
-      label: 'Maps',
-      key: 'maps',
-      href: '/map',
-      nestedNavLinks: [
-        { label: 'Census 2011', key: 'census2011', href: '/maps/census2011' },
-        { label: 'TestMap 1', key: 'testmap1', href: '/maps/testmap1' },
-        { label: 'TestMap 2', key: 'testmap2', href: '/maps/testmap2' },
-        { label: 'TestMap 3', key: 'testmap3', href: '/maps/testmap3' }
-      ]
-    },
+    // {
+    //   label: 'Maps',
+    //   key: 'maps',
+    //   href: '/map',
+    //   nestedNavLinks: [
+    //     { label: 'Census 2011', key: 'census2011', href: '/maps/census2011' },
+    //     { label: 'TestMap 1', key: 'testmap1', href: '/maps/testmap1' },
+    //     { label: 'TestMap 2', key: 'testmap2', href: '/maps/testmap2' },
+    //     { label: 'TestMap 3', key: 'testmap3', href: '/maps/testmap3' }
+    //   ]
+    // },
     { label: 'Plans', key: 'plans', href: '/plans' },
-    { label: 'Contact', key: 'contact', href: '/contact' },
-    { label: 'Test', key: 'test', href: '/test' },
-    { label: 'Test2', key: 'test2', href: '/test2' }
+    { label: 'Contact', key: 'contact', href: '/contact' }
   ];
   
   locals.user = req.user;

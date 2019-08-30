@@ -68,3 +68,16 @@ body {
   height: 100%;
   background-size: cover;
 }
+
+.textcentre {
+	text-align: center;
+}
+
+.icon {
+	font-size: 12em;
+	color: indigo;
+}
+
+.c-indigo {
+	color: indigo
+}
