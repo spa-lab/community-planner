@@ -19,9 +19,28 @@ Change code in ./routes/emails.js
 --------
 For Apache / many node servers
 
-Change the code in
-\community-planner\node_modules\keystone\admin\server\routes
-\community-planner\node_modules\keystone\admin\server\templates
+Change the code in:
 
+\community-planner\node_modules\keystone\admin\server\routes
+	index.js
+	signin.js
+	signout.js
+
+\community-planner\routes
+	emails.js
+	middleware.js
+
+\community-planner\templates\views\helpers
+	index.js
+	
+\community-planner\templates\views\layouts
+	combobox-mapstory-layout.hbs
+	default.hbs
+	map-layout.hbs
+	plans-layout.hbs
+
+\community-planner\templates\views
+	blog.hbs
+	post.hbs
 
 

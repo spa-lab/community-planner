@@ -35,15 +35,15 @@ keystone.init({
   'auth': true,
   'user model': 'User',
   'port': 8084,
-  
-  //'admin path': '/keystone',
-  //'codemirror url path': '/',
-  //'back url': '/',
-  
-  'signin url': '/signin',
-  'signin redirect': '/',
-  'signout url': '/signout',
-  'signout redirect': '/',
+
+  // 'admin path': '/community-planner/keystone',
+  // 'codemirror url path': '/community-planner',
+  // 'back url': '/community-planner',
+
+  'signin url': '/community-planner/signin',
+  'signin redirect': '/community-planner',
+  'signout url': '/community-planner/signout',
+  'signout redirect': '/community-planner',
   'signin logo': ['/community-planner/images/key.svg', 200, 200],
   
 });

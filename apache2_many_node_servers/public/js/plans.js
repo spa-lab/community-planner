@@ -1990,8 +1990,8 @@ var API = {
   /**
    * The host url part. (eg: http://localhost:8084/).
    */
-  host: "http://localhost:8084/", /* TODO: CHANGE host url to your domain */
-  //host: "http://maps.humanities.manchester.ac.uk:8084/",
+  //host: "http://localhost:8084/", /* TODO: CHANGE host url to your domain */
+  host: "http://maps.humanities.manchester.ac.uk/community-planner/",
   
   /**
    * Gets the logged in user.
