@@ -16,3 +16,12 @@ Change code in ./updates/0.0.1-admins.js
 Change code in ./routes/emails.js
 
 
+--------
+For Apache / many node servers
+
+Change the code in
+\community-planner\node_modules\keystone\admin\server\routes
+\community-planner\node_modules\keystone\admin\server\templates
+
+
+
