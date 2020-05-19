@@ -7,13 +7,13 @@ Developed using the KeystoneJS Content Management System and mongoDB document st
 The application provides the following capabilities:
 
 - Publish Plans
-The system allows an administrator to publish neighbourhood plans. Plans can have geographic layers that can be rendered on a map to allow users get insights. Detailed plan descriptions can be read on screen and related documents can be downloaded.
+	The system allows an administrator to publish neighbourhood plans. Plans can have geographic layers that can be rendered on a map to allow users get insights. Detailed plan descriptions can be read on screen and related documents can be downloaded.
 
 - Comment
-Users of the system can comment on existing plans and read comments of other users. Comments can be geolocated on a map using points, lines or polygons.
+	Users of the system can comment on existing plans and read comments of other users. Comments can be geolocated on a map using points, lines or polygons.
 
 - Make Proposals
-Users are allowed to make their own planning proposals that can be saved in the database. The proposals can then be mapped and accessed by the other users of the system as well as be commented.
+	Users are allowed to make their own planning proposals that can be saved in the database. The proposals can then be mapped and accessed by the other users of the system as well as be commented.
 
 
 ## Demo website ##
