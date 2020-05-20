@@ -59,7 +59,7 @@ Click on the 'Plans' located at the top menu of the website and you will be navi
 
 An administrator has access to the capabilities of a content management system. Thus, an administrator can create new complex plans, upload geospatial layers to the system and create plan maps to allow the geospatial layers be rendered on the map. An administrator can upload files, provide plan texts and delete comments if necessary. 
 
-## Instalation ##
+## Installation ##
 
 The application can be installed by downloading the zip file of the source code published in github or (if your system has git installed) by cloning the source code.
 
