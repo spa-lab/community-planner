@@ -73,13 +73,13 @@ Once the script finish, you need to rename the sample.env file to .env, or creat
 
 The web app uses the Mongo database. Therefore you need to install it if you don't have it already in your system. Once you install the MongoDB you can create a new database named 'community-planner' either using your terminal or a Mongo client like Robo 3T.
 
-If you are using windows you can run from your terminal the batch file named import-database.bat located at the mongo-database subfolder of your installation. If you are using Linux modify the contents of the batch file appropriately or run the commands found there individually. Once the entire process you should have the contents of your database loaded in Mongo.
+If you are using windows you can run from your terminal the batch file named import-database.bat located at the mongo-database subfolder of your installation. If you are using Linux modify the contents of the batch file appropriately or run the commands found there individually. Once the entire process is completed you should have the contents of your database loaded in Mongo.
 
 Then all you need to do to run the application is to type the following command in your terminal:
 
 	node community-planner.js
 
-The command will start the server of the application. The server uses port 8084 of your system. If you need to change the port, it can be done by editing the 'community-planner.js' initialization script. Once the server is started you can use your preferable web browser to navigate to the following url:
+The command will start the server of the application. The server uses port 8084 of your system. You can change the port by editing the 'community-planner.js' initialization script. Once the server is started you can use your preferable web browser to navigate to the following url:
 
 	http://localhost:8084
 
@@ -92,17 +92,8 @@ You can login to the system using the following credentials:
 
 In case you need to install the app for public use you MUST change the COOKIE_SECRET in the .env file of the application. This is used to encode passwords in your Mongo database, so make sure you are using a clean database, otherwise old users or plans won't work.
 
+The administration pages of the application can be accessed in the following url:
 
-
-
-
-
-
-
-
-
-
-
-
+	http://localhost:8084/keystone/
 
 
